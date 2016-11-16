@@ -1,4 +1,9 @@
-# README
+# Beacon Social App
+
+Author: Chrissy Clyde
+Description: A social networking app.
+
+===========================================================================
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
