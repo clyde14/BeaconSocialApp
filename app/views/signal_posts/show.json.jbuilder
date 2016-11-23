@@ -1,0 +1,1 @@
+json.partial! "signal_posts/signal_post", signal_post: @signal_post

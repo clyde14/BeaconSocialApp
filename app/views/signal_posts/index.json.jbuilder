@@ -1,0 +1,1 @@
+json.array! @signal_posts, partial: 'signal_posts/signal_post', as: :signal_post

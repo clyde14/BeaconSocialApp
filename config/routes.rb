@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :signal_posts
   resources :users
   get 'welcome/index'
   
