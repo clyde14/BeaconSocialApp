@@ -6,11 +6,15 @@ So that I can use the full functionality of the website
 
 Scenario: User can choose username
 When I go to the signup page
-Then I should see a field to enter a username
+Then I should see a field to enter my username
 
 Scenario: User can choose nickname
 When I go to the signup page
-Then I should see a field to enter a nickname
+Then I should see a field to enter my nickname
+
+Scenario: User can enter email
+When I go to the signup page
+Then I should see a field to enter my email
 
 Scenario: User sees submit button
 When I go to the signup page

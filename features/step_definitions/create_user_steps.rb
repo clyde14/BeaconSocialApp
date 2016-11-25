@@ -1,16 +1,14 @@
 #encoding: utf-8
 When(/^I go to the signup page$/) do
-  visit ui_url 'users/new'
+  visit "http://localhost:8000/users/new"
+  expect(page).to have_no_content 'Routing Error'
 end
 
-Then(/^I should see a field to enter a username$/) do |infoType|
-  page.should have_content 'Username'
-end
-
-Then(/^I should see a field to enter a nickname$/) do |infoType|
-  page.should have_content 'Nickname'
+Then(/^I should see a field to enter my (.*)$/) do |fieldname|
+  expect(page).to have_xpath '//input[@name="user[%1$s]"]' % [fieldname]
 end
 
 Then(/^I should see a submit button$/) do
-  page.should have_content 'Submit button'
+  expect(page).to have_no_content 'Submit button'
+  expect(page).to have_xpath '//form[@class="new_user"]//input[@type="submit"]'
 end
