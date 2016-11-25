@@ -48,4 +48,9 @@ group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'rspec-expectations'
+  gem 'poltergeist', ">= 1.4.0"
+  gem 'selenium-webdriver'
+  gem 'launchy'
+  gem 'rest-client'
 end
