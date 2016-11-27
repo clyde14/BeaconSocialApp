@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body, div, span, 
+table, caption, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+html {
+	height: 100%;
+}
+ 
+ body {
+	line-height: 1;
+	display: flex; 
+	height: 100%; 
+	flex-direction: column;
+ }
+ 
+ header {
+	background-color: #BBA015;
+	color: white;
+	width: auto;
+	padding: 15px;
+	font-size: 60px;
+ }
+ 
+a.title {
+	color: inherit;
+	text-decoration: inherit;
+	background-color: inherit;
+	font-family: "Avant Garde", "Tahoma", Helvetica, sans-serif;
+	
+}
+
+img {
+    vertical-align: text-bottom;
+}
+ 
+ main {
+	flex: 1; 
+	overflow: auto;
+ }
+ 
+ article {
+	margin: 30px;
+ }
+ 
