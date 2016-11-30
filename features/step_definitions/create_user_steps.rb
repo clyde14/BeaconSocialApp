@@ -9,6 +9,5 @@ Then(/^I should see a field to enter my (.*)$/) do |fieldname|
 end
 
 Then(/^I should see a submit button$/) do
-  expect(page).to have_no_content 'Submit button'
   expect(page).to have_xpath '//form[@class="new_user"]//input[@type="submit"]'
 end
