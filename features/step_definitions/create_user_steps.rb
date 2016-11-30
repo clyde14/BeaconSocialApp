@@ -22,5 +22,5 @@ end
 
 Then(/^I should see an error message saying (.*)$/) do |errorMessage|
   expect(page).to have_xpath '//div[@id="error_explanation"]'
-  expect(page).to have_content [errorMessage]
+  expect(page).to have_content errorMessage
 end
