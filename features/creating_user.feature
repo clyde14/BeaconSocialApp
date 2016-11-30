@@ -24,4 +24,4 @@ Scenario: App rejects empty username
 Given I go to the signup page
 And I enter  into the username field
 When I click the Create User button
-Then I should see an error message saying Username is empty
+Then I should see an error message saying Username can't be blank
