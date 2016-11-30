@@ -1,6 +1,6 @@
 #encoding: utf-8
 When(/^I go to the signup page$/) do
-  visit "http://localhost:8000/users/new"
+  visit "http://localhost:8000/signup"
   expect(page).to have_no_content 'Routing Error'
 end
 

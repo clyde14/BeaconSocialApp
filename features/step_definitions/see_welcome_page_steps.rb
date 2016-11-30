@@ -9,5 +9,5 @@ Then(/^I should see the welcome message$/) do
 end
 
 Then(/^I should see a link to the signup page$/) do
-  expect(page).to have_xpath '//a[@href="/users/new"]'
+  expect(page).to have_xpath '//a[@href="/signup"]'
 end
