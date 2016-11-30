@@ -25,3 +25,9 @@ Given I go to the signup page
 And I enter  into the username field
 When I click the Create User button
 Then I should see an error message saying Username can't be blank
+
+Scenario: App rejects empty email
+Given I go to the signup page
+And I enter  into the email field
+When I click the Create User button
+Then I should see an error message saying Email can't be blank
