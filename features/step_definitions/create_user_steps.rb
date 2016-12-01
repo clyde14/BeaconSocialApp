@@ -23,3 +23,11 @@ end
 Then(/^I should see an error message saying (.*)$/) do |errorMessage|
   expect(page).to have_xpath '//div[@id="error_explanation"]//*[contains(.,"%1$s")]' % [errorMessage]
 end
+
+Given(/^I enter a username that is (\d+) characters long$/) do |len|
+  fill_in('user[username]', :with => "a" * len.to_i)
+end
+
+Given(/^I enter an email that is (\d+) characters long$/) do |len|
+  fill_in('user[email]', :with => "a" * (len.to_i-6) + "@g.com")
+end

@@ -31,3 +31,17 @@ Given I go to the signup page
 And I enter  into the email field
 When I click the Create User button
 Then I should see an error message saying Email can't be blank
+
+Scenario: App rejects usernames over 40 characters long
+Given I go to the signup page
+And I enter a username that is 41 characters long
+When I click the Create User button
+Then I should see an error message saying Username is too long
+
+Scenario: App rejects emails over 255 characters long
+Given I go to the signup page
+And I enter an email that is 256 characters long
+When I click the Create User button
+Then I should see an error message saying Email is too long
+
+
