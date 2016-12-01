@@ -32,6 +32,24 @@ And I enter  into the email field
 When I click the Create User button
 Then I should see an error message saying Email can't be blank
 
+Scenario: App rejects invalid email (missing @)
+Given I go to the signup page
+And I enter test_user_at_site.com into the email field
+When I click the Create User button
+Then I should see an error message saying Email is invalid
+
+Scenario: App rejects invalid email (missing .)
+Given I go to the signup page
+And I enter test_user@site_com into the email field
+When I click the Create User button
+Then I should see an error message saying Email is invalid
+
+Scenario: App accepts valid email
+Given I go to the signup page
+And I enter test_user@site.com into the email field
+When I click the Create User button
+Then I should not see an error message saying Email is invalid
+
 Scenario: App rejects usernames over 40 characters long
 Given I go to the signup page
 And I enter a username that is 41 characters long
