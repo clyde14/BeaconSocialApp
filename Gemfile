@@ -54,3 +54,6 @@ group :test, :development do
   gem 'launchy'
   gem 'rest-client'
 end
+
+#Use bcrypt for password hashing
+gem 'bcrypt',         '3.1.11'
