@@ -62,4 +62,11 @@ And I enter an email that is 256 characters long
 When I click the Create User button
 Then I should see an error message saying Email is too long
 
+Scenario: App rejects duplicate username
+Given I go to the signup page
+And I enter beaconsocialapp into the username field
+And I enter beaconsocialapp@whatever.net into the email field
+When I click the Create User button
+Then I should see an error message saying Username has already been taken
+
 
