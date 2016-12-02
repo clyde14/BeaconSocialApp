@@ -4,6 +4,10 @@ Given(/^I go to the login page$/) do
   expect(page).to have_no_content 'Routing Error'
 end
 
+When(/^I click the (.*) link$/) do |navbaroption|
+  click_link('%1$s' % [navbaroption])
+end
+
 Then(/^I should see a login button$/) do
   expect(page).to have_xpath '//form[@action="/login"]//input[@type="submit"]'
 end
@@ -22,19 +26,19 @@ Then(/^I should be on (.*)'s user profile$/) do |username|
 end
 
 Then(/^I(?: should)? see the logged\-out navbar items$/) do
-  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Home")]'
-  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Log in")]'
+  expect(page).to have_xpath '//nav//*[@class="navbaritem" and contains(.,"Home")]'
+  expect(page).to have_xpath '//nav//*[@class="navbaritem" and contains(.,"Log in")]'
   
-  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Users")]'
-  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Profile")]'
-  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Log out")]'
+  expect(page).to have_no_xpath '//nav//*[@class="navbaritem" and contains(.,"Users")]'
+  expect(page).to have_no_xpath '//nav//*[@class="navbaritem" and contains(.,"Profile")]'
+  expect(page).to have_no_xpath '//nav//*[@class="navbaritem" and contains(.,"Log out")]'
 end
 
 Then(/^I(?: should)? see the logged\-in navbar items$/) do
-  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Home")]'
-  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Users")]'
-  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Profile")]'
-  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Log out")]'
+  expect(page).to have_xpath '//nav//*[@class="navbaritem" and contains(.,"Home")]'
+  expect(page).to have_xpath '//nav//*[@class="navbaritem" and contains(.,"Users")]'
+  expect(page).to have_xpath '//nav//*[@class="navbaritem" and contains(.,"Profile")]'
+  expect(page).to have_xpath '//nav//*[@class="navbaritem" and contains(.,"Log out")]'
   
-  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Log in")]'
+  expect(page).to have_no_xpath '//nav//*[@class="navbaritem" and contains(.,"Log in")]'
 end
