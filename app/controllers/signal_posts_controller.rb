@@ -69,6 +69,6 @@ class SignalPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def signal_post_params
-      params.require(:signal_post).permit(:content, :userId)
+      params.require(:signal_post).permit(:content, :user_id)
     end
 end

@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201223843) do
+ActiveRecord::Schema.define(version: 20161202033901) do
 
   create_table "signal_posts", force: :cascade do |t|
     t.text     "content"
-    t.integer  "userId"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id", "created_at"], name: "index_signal_posts_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_signal_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -16,7 +16,7 @@
     <% @signal_posts.each do |signal_post| %>
       <tr>
         <td><%= signal_post.content %></td>
-        <td><%= signal_post.userId %></td>
+        <td><%= signal_post.user_id %></td>
         <td><%= link_to 'Show', signal_post %></td>
         <td><%= link_to 'Edit', edit_signal_post_path(signal_post) %></td>
         <td><%= link_to 'Destroy', signal_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
