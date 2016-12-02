@@ -4,28 +4,28 @@ Given(/^I go to the signup page$/) do
   expect(page).to have_no_content 'Routing Error'
 end
 
-When(/^I enter (.*) into the (.*) field$/) do |value, fieldname|
-  fill_in('user[%1$s]' % [fieldname], :with => value)
+When(/^I enter (.*) into the (.*)'s (.*) field$/) do |value, objname, fieldname|
+  fill_in('%1$s[%2$s]' % [objname, fieldname], :with => value)
 end
 
 When(/^I click the (.*) button$/) do |btnname|
   click_button(btnname)
 end
 
-Then(/^I should see a field to enter my (.*)$/) do |fieldname|
-  expect(page).to have_xpath '//input[@name="user[%1$s]"]' % [fieldname]
+Then(/^I should see a field to enter my (.*)'s (.*)$/) do |objname, fieldname|
+  expect(page).to have_xpath '//input[@name="%1$s[%2$s]"]' % [objname, fieldname]
 end
 
 Then(/^I should see a submit button$/) do
   expect(page).to have_xpath '//form[@class="new_user"]//input[@type="submit"]'
 end
 
-Then(/^I should see an error message saying (.*)$/) do |errorMessage|
-  expect(page).to have_xpath '//div[@id="error_explanation"]//*[contains(.,"%1$s")]' % [errorMessage]
+Then(/^I should see an? (.*) message saying (.*)$/) do |messageType, errorMessage|
+  expect(page).to have_xpath '//div[@id="%1$s" and contains(.,"%2$s")]' % [messageType, errorMessage]
 end
 
-Then(/^I should not see an error message saying (.*)$/) do |errorMessage|
-  expect(page).to have_no_xpath '//div[@id="error_explanation"]//*[contains(.,"%1$s")]' % [errorMessage]
+Then(/^I should not see an? (.*) message saying (.*)$/) do |messageType, errorMessage|
+  expect(page).to have_no_xpath '//div[@id="%1$s"]//*[contains(.,"%2$s")]' % [messageType, errorMessage]
 end
 
 Given(/^I enter a username that is (\d+) characters long$/) do |len|

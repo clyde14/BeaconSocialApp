@@ -65,3 +65,22 @@ img {
 	margin: 30px;
  }
  
+div.danger, div.notice, div.success {
+	padding: 10px;
+	margin: 10px 0px;
+	border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
+ 
+div.danger {
+	color: red;
+	background-color: mistyrose;
+ }
+ 
+div.notice, div.success {
+	color: green;
+	background-color: lightgreen;
+ }
+ 
+ 
