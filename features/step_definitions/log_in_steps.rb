@@ -15,3 +15,8 @@ end
 Then(/^I should not see an? (.*) flash saying (.*)$/) do |messageType, errorMessage|
   expect(page).to have_no_xpath '//div[@class="%1$s"]//*[contains(.,"%2$s")]' % [messageType, errorMessage]
 end
+
+Then(/^I should be on (.*)'s user profile$/) do |username|
+  expect(page).to have_xpath '//h1[contains(.,"View User Profile")]'
+  expect(page).to have_xpath '//main[contains(.,"%1$s")]' % [username]
+end
