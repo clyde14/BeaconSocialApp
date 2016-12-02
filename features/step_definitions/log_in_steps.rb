@@ -20,3 +20,21 @@ Then(/^I should be on (.*)'s user profile$/) do |username|
   expect(page).to have_xpath '//h1[contains(.,"View User Profile")]'
   expect(page).to have_xpath '//main[contains(.,"%1$s")]' % [username]
 end
+
+Then(/^I(?: should)? see the logged\-out navbar items$/) do
+  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Home")]'
+  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Log in")]'
+  
+  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Users")]'
+  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Profile")]'
+  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Log out")]'
+end
+
+Then(/^I(?: should)? see the logged\-in navbar items$/) do
+  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Home")]'
+  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Users")]'
+  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Profile")]'
+  expect(page).to have_xpath '//nav//[@class="navbaritem" and contains(.,"Log out")]'
+  
+  expect(page).to have_no_xpath '//nav//[@class="navbaritem" and contains(.,"Log in")]'
+end

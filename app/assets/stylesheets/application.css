@@ -37,20 +37,36 @@ html {
  }
  
  header {
+	font-family: "Avant Garde", "Tahoma", Helvetica, sans-serif;
 	background-color: #BBA015;
 	color: white;
 	width: auto;
-	padding: 15px;
+	padding: 0px;
 	font-size: 60px;
  }
- 
-a.title {
+
+header a {
 	color: inherit;
 	text-decoration: inherit;
 	background-color: inherit;
-	font-family: "Avant Garde", "Tahoma", Helvetica, sans-serif;
-	
 }
+ 
+div.title {
+	color: white;
+	padding: 15px;
+}
+ 
+ nav {
+	background-color: lightyellow;
+	color: goldenrod;
+	width: auto;
+	padding: 15px;
+	font-size: 14px;
+ }
+ 
+ .navbaritem {
+	padding: 0px 20px;
+ }
 
 img {
     vertical-align: text-bottom;
