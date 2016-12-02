@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+	    log_in @user
         format.html { redirect_to @user, notice: 'You successfully created an account - Welcome to Beacon!' }
         format.json { render :show, status: :created, location: @user }
       else
