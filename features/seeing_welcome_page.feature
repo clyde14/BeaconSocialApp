@@ -1,5 +1,5 @@
-# feature/creating_user.feature
-Feature: Create User
+# feature/seeing_welcome_page.feature
+Feature: See Welcome Pages
 As a visitor
 I want to see a welcome page
 So that I can feel welcome at the site and know what to do next

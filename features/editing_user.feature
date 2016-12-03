@@ -1,4 +1,4 @@
-# feature/creating_user.feature
+# feature/editing_user.feature
 Feature: Edit Profile
 As a user
 I want to edit my profile

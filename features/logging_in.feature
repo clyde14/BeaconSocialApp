@@ -1,4 +1,4 @@
-# feature/creating_user.feature
+# feature/logging_in.feature
 Feature: Log in
 As a registered user
 I want to log in

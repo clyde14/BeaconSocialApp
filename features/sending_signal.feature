@@ -1,5 +1,5 @@
-# feature/creating_user.feature
-Feature: Create User
+# feature/sending_signal.feature
+Feature: Send Signal
 As a registered user
 I want to send a signal
 So that I can share something with my followers

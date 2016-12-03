@@ -1,5 +1,5 @@
-# feature/creating_user.feature
-Feature: Edit Profile
+# feature/editing_user_security.feature
+Feature: Edit Profile is Secure
 As a user
 I do not want others to be able to edit my profile
 So that my information is safe
