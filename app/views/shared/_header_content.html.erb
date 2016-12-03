@@ -7,7 +7,7 @@
 <nav>
         <span class="navbaritem"><%= link_to "Home", root_path %></span>
         <% if logged_in? %>
-			<span class="navbaritem"><%= link_to "Users", '#' %></span>
+			<span class="navbaritem"><%= link_to "Users", '/users' %></span>
 			<span class="navbaritem"><%= link_to "Profile", current_user %></span>
 			<span class="navbaritem"><%= link_to "Log out", logout_path, method: "delete" %></span>
         <% else %>
