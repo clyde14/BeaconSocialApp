@@ -4,8 +4,8 @@ Given(/^I go to the login page$/) do
   expect(page).to have_no_content 'Routing Error'
 end
 
-When(/^I click the (.*) link$/) do |navbaroption|
-  click_link('%1$s' % [navbaroption])
+When(/^I click the (.*) link$/) do |link|
+  click_link('%1$s' % [link])
 end
 
 Then(/^I should see a login button$/) do

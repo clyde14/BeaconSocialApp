@@ -12,4 +12,6 @@
   <%= @user.nickname %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %>
+<% if logged_in? %>
+	<%= link_to 'Edit', edit_user_path(@user) %>
+<% end %>

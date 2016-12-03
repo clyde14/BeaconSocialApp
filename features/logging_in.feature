@@ -4,11 +4,11 @@ As a registered user
 I want to log in
 So that I can access my information and use the full functionality of the website
 
-Scenario: User can login with username
+Scenario: User can enter username on login
 Given I go to the login page
 Then I should see a field to enter my session's username
 
-Scenario: User can enter password
+Scenario: User can enter password on login
 Given I go to the login page
 Then I should see a field to enter my session's password
 
