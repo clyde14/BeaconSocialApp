@@ -1,4 +1,7 @@
-<% provide(:title, "Welcome") %>
-<h1>Welcome</h1>
-<p>Welcome to Beacon!</p>
-<p><%= link_to "Create an Account", signup_path %></p>
+<% provide(:title, "Home") %>
+
+<% if logged_in? %>
+	<%= render "shared/feed" %>
+<% else %>
+	<%= render "welcome" %>
+<% end %>

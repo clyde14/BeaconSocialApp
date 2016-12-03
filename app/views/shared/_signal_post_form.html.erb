@@ -1,0 +1,7 @@
+<%= form_for(@signal_post) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Write a new signal..." %>
+  </div>
+  <%= f.submit "Send", class: "btn btn-primary" %>
+<% end %>

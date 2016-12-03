@@ -1,0 +1,9 @@
+<h1>Welcome</h1>
+<aside class="col-md-4">
+	<section class="user_info">
+		<%= current_user.nickname %> (@<%= current_user.username %>)
+	</section>
+	<section class="signal_post_form">
+		<%= render 'shared/signal_post_form' %>
+	</section>
+</aside>
