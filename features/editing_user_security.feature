@@ -24,7 +24,7 @@ And I enter testuser into the session's username field
 And I enter theRightPassword456 into the session's password field
 And I click the Log in button
 And I should not see a danger flash saying Invalid username/password combination
-And I should be on testuser's user profile
+And I should be on Alice (testuser)'s user profile
 And I should see the logged-in navbar items
 When I try to access another user's edit profile page directly
 Then I should be on the home page
@@ -36,7 +36,7 @@ And I enter testuser into the session's username field
 And I enter theRightPassword456 into the session's password field
 And I click the Log in button
 And I should not see a danger flash saying Invalid username/password combination
-And I should be on testuser's user profile
+And I should be on Alice (testuser)'s user profile
 And I should see the logged-in navbar items
 When I go to another user's profile page
 Then I should not see the Edit link

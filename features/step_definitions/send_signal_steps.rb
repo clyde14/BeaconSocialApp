@@ -13,6 +13,5 @@ Then(/^I should see a field to enter a signal's (.*)$/) do |fieldname|
 end
 
 Then(/^I should see a signal submit button$/) do
-  expect(page).to have_no_content 'Submit button'
   expect(page).to have_xpath '//form[@class="new_signal_post"]//input[@type="submit"]'
 end

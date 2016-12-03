@@ -37,7 +37,8 @@ And I enter testuser into the session's username field
 And I enter theRightPassword456 into the session's password field
 When I click the Log in button
 Then I should not see a danger flash saying Invalid username/password combination
-And I should be on testuser's user profile
+And I should be on Alice (testuser)'s user profile
+And I should see signal_posts
 And I should see the logged-in navbar items
 When I click the Log out link
 Then I should see the logged-out navbar items

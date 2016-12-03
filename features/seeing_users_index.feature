@@ -17,7 +17,7 @@ And I enter testuser into the session's username field
 And I enter theRightPassword456 into the session's password field
 And I click the Log in button
 And I should not see a danger flash saying Invalid username/password combination
-And I should be on testuser's user profile
+And I should be on Alice (testuser)'s user profile
 And I should see the logged-in navbar items
 And I go to the users page
 Then I should see a list of users

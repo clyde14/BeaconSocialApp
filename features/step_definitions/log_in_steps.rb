@@ -20,8 +20,8 @@ Then(/^I should not see an? (.*) flash saying (.*)$/) do |messageType, errorMess
   expect(page).to have_no_xpath '//div[@class="%1$s"]//*[contains(.,"%2$s")]' % [messageType, errorMessage]
 end
 
-Then(/^I should be on (.*)'s user profile$/) do |username|
-  expect(page).to have_xpath '//h1[contains(.,"View User Profile")]'
+Then(/^I should be on (.*) \((.*)\)'s user profile$/) do |nickname, username|
+  expect(page).to have_xpath '//h1[contains(.,"View %1$s (@%2$s)\'s User Profile")]' % [nickname, username]
   expect(page).to have_xpath '//main[contains(.,"%1$s")]' % [username]
 end
 

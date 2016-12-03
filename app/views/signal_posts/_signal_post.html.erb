@@ -1,0 +1,8 @@
+<li id="signal_post-<%= signal_post.id %>">
+  <span class="nickname"><%= link_to signal_post.user.nickname, signal_post.user %></span>
+  <span class="username">(@<%= signal_post.user.username %>)</span>
+  <span class="content"><%= signal_post.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(signal_post.created_at) %> ago.
+  </span>
+</li>
