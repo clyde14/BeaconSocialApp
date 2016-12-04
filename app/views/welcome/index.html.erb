@@ -1,7 +1,7 @@
 <% provide(:title, "Home") %>
 
 <% if logged_in? %>
-	<%= render "shared/feed" %>
+	<%= render "shared/feed_display" %>
 <% else %>
 	<%= render "welcome" %>
 <% end %>

@@ -4,5 +4,9 @@
   <span class="content"><%= signal_post.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(signal_post.created_at) %> ago.
+	<% if current_user?(signal_post.user) %>
+      <%= link_to "delete", signal_post, method: :delete,
+                                       data: { confirm: "Are you sure you want to delete this signal?" } %>
+    <% end %>
   </span>
 </li>
