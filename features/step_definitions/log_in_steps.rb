@@ -5,7 +5,7 @@ Given(/^I go to the login page$/) do
 end
 
 When(/^I click the (.*) link$/) do |link|
-  click_link('%1$s' % [link])
+  click_link '%1$s' % [link]
 end
 
 Then(/^I should see a login button$/) do
