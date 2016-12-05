@@ -23,3 +23,11 @@ end
 Then(/^I should not see (.*) displayed in a list item$/) do |licontent|
   expect(page).to have_no_xpath '//li[contains(.,"%1$s")]' % [licontent]
 end
+
+Then(/^I should see signals by (.*)$/) do |username|
+  expect(page).to have_xpath '//span[@class="username" and contains(.,"(@%1$s)")]' % [username]
+end
+
+Then(/^I should not see signals by (.*)$/) do |username|
+  expect(page).to have_no_xpath '//span[@class="username" and contains(.,"(@%1$s)")]' % [username]
+end
