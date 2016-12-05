@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :signal_posts, only: [:create, :destroy]
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :follows_relationships,	only: [:create, :destroy]
   
   get 'welcome/index'
   root 'welcome#index'

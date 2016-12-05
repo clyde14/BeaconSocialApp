@@ -1,8 +1,12 @@
 <h1>Welcome</h1>
 <aside class="col-md-4">
 	<section class="user_info">
-		<%= current_user.nickname %> (@<%= current_user.username %>)
+		<span class="nickname"><%= link_to current_user.nickname, current_user %></span>
+		<span class="username">(@<%= current_user.username %>)</span>
 	</section>
+    <section class="stats">
+		<%= render 'shared/stats' %>
+    </section>
 	<section class="signal_post_form">
 		<%= render 'shared/signal_post_form' %>
 	</section>

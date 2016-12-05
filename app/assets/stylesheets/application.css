@@ -81,6 +81,10 @@ img {
 	margin: 30px;
  }
  
+ section {
+	 margin: 5px;
+ }
+ 
 div.danger, div.notice, div.success {
 	padding: 10px;
 	margin: 10px 0px;
@@ -99,4 +103,26 @@ div.notice, div.success {
 	background-color: lightgreen;
  }
  
+.stats {
+  overflow: auto;
+  margin: 5px;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: goldenrod;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
  
